@@ -1,0 +1,348 @@
+.habits-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.habits-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.habits-page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.habits-page-header p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.add-habit-btn {
+  padding: 0.65rem 1.4rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.add-habit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+}
+
+.habits-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.habits-list-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.panel-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.panel-empty span {
+  font-size: 2rem;
+}
+
+.habit-list-item {
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--primary);
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.habit-list-item:last-child {
+  border-bottom: none;
+}
+
+.habit-list-item:hover {
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.habit-list-item.selected {
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.habit-list-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.habit-list-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.habit-list-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.mini-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.mini-toggle:hover {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.mini-toggle.done {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.mini-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.mini-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mini-btn.danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: var(--danger);
+}
+
+.habit-list-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.freq-pill {
+  padding: 0.15rem 0.5rem;
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--primary-light);
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.calendar-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  min-height: 380px;
+}
+
+.calendar-habit-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cal-habit-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.calendar-habit-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.calendar-habit-info p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.calendar-nav span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.calendar-nav button {
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.calendar-nav button:hover {
+  border-color: var(--primary);
+  color: var(--primary-light);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 1rem;
+}
+
+.cal-weekday {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.3rem 0;
+  text-transform: uppercase;
+}
+
+.cal-empty {
+  aspect-ratio: 1;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-dark);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.cal-day:hover:not(.future) {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.cal-day.done {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.cal-day.today {
+  border-color: var(--primary);
+  color: var(--primary-light);
+  font-weight: 700;
+}
+
+.cal-day.today.done {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.cal-day.future {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.calendar-legend {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+
+.done-dot { background: var(--success); }
+.miss-dot { background: var(--bg-dark); border: 1px solid var(--border); }
+.today-dot { background: transparent; border: 1px solid var(--primary); }
+
+.cal-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+  gap: 0.75rem;
+  color: var(--text-muted);
+}
+
+.cal-empty-state span {
+  font-size: 3rem;
+}
+
+.cal-empty-state p {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .habits-layout {
+    grid-template-columns: 1fr;
+  }
+}
