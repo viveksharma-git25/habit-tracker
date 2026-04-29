@@ -53,7 +53,7 @@ npm start
 ```
 
 ### Step 3 - Open Browser
-Visit `http://localhost:3000`
+Visit `http://localhost:5000`
 
 ## Environment Variables (backend/.env)
 ```
